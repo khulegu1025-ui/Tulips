@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#050b16">
+  <meta name="description" content="A little midnight garden of blue tulips. Open your gift and watch them bloom.">
+  <meta property="og:title" content="Some flowers, just for you.">
+  <meta property="og:description" content="A little something, in your favorite shade of blue.">
+  <meta property="og:url" content="https://blue-tulips-for-you.fizzynote16.chatgpt.site">
+  <title>Blue Tulips — For You</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="garden.js" defer></script>
+</head>
+<body>
+  <div class="atmosphere" aria-hidden="true">
+    <div class="aura aura-one"></div><div class="aura aura-two"></div>
+    <div id="stars" class="stars"></div><div class="grain"></div>
+  </div>
+
+  <header class="topbar">
+    <a class="wordmark" href="./" aria-label="Blue Tulips home">
+      <svg viewBox="0 0 24 30" fill="none" aria-hidden="true"><path d="M12 28V14M12 23C5 23 3 19 3 17C8 17 11 19 12 23ZM12 26C18 25 21 21 21 18C16 19 13 22 12 26Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><path d="M5 3L8.5 6L12 2L15.5 6L19 3V10C19 15 5 15 5 10Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>
+      <span>midnight blooms</span>
+    </a>
+    <button class="sound-toggle" id="sound" type="button" aria-pressed="false" aria-label="Turn soft music on">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M11 5L6 9H3V15H6L11 19V5Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/><path class="sound-off-icon" d="M16 9L22 15M22 9L16 15" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><path class="sound-on-icon" d="M15 8C18 10 18 14 15 16M18 5C23 9 23 15 18 19" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+      <span id="sound-label">Sound off</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="intro" id="intro" aria-labelledby="intro-title">
+      <div class="gift-emblem" aria-hidden="true">
+        <span class="emblem-orbit"></span>
+        <svg viewBox="0 0 100 138" fill="none">
+          <defs><linearGradient id="mini-blue" x1="25" y1="20" x2="74" y2="76" gradientUnits="userSpaceOnUse"><stop stop-color="#a4d4ff"/><stop offset=".45" stop-color="#5b93f5"/><stop offset="1" stop-color="#1d4099"/></linearGradient><linearGradient id="mini-green" x1="33" y1="62" x2="63" y2="132"><stop stop-color="#78bfc1"/><stop offset="1" stop-color="#264751"/></linearGradient></defs>
+          <path d="M50 126V66" stroke="url(#mini-green)" stroke-width="2.5"/>
+          <path d="M49 111C27 105 24 89 23 81C44 86 51 98 49 111Z" fill="url(#mini-green)"/>
+          <path d="M51 122C75 111 76 98 76 89C56 97 49 111 51 122Z" fill="url(#mini-green)"/>
+          <path d="M50 68C20 66 18 40 24 19C34 24 41 31 50 46C59 29 65 24 77 19C81 44 79 68 50 68Z" fill="url(#mini-blue)"/>
+          <path d="M50 68C31 61 36 34 50 11C68 35 68 60 50 68Z" fill="url(#mini-blue)"/>
+          <path d="M27 23C32 38 38 43 43 49M52 17C45 34 44 42 45 51" stroke="#cce3ff" stroke-width="1" stroke-linecap="round" opacity=".45"/>
+        </svg>
+      </div>
+      <p class="eyebrow">A LITTLE SOMETHING</p>
+      <h1 id="intro-title">Some flowers,<br><em>just for you.</em></h1>
+      <p class="intro-note">Just a reason to smile.</p>
+      <button class="bloom-button" id="bloom" type="button">
+        <span>Open your flowers</span>
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12H19M13 6L19 12L13 18" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <span class="intro-footnote">a small gift that never wilts</span>
+    </section>
+
+    <section class="garden" id="garden" aria-label="Your blue tulip garden" aria-hidden="true" inert>
+      <div class="dedication">
+        <p class="eyebrow">EVERY PETAL, A LITTLE THOUGHT OF YOU</p>
+        <h2>For you, <em>in blue.</em></h2>
+        <p>Hope these make your day a little softer.</p>
+      </div>
+      <div class="flower-stage" id="flower-stage">
+        <div class="ground-glow" aria-hidden="true"></div>
+        <svg class="flower-art" id="flower-art" viewBox="0 45 900 720" role="img" aria-labelledby="flower-title flower-description">
+          <title id="flower-title">Seven blue tulips blooming under the stars</title>
+          <desc id="flower-description">Cobalt and sky-blue, cup-shaped tulips on gently curving green stems, surrounded by leaves and floating lights.</desc>
+          <defs>
+            <linearGradient id="stem" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#103d3c"/><stop offset=".4" stop-color="#53a29a"/><stop offset=".7" stop-color="#386966"/><stop offset="1" stop-color="#163e40"/></linearGradient>
+            <linearGradient id="leaf-left" x1="0" y1="1" x2=".6" y2="0"><stop stop-color="#0a2c30"/><stop offset=".55" stop-color="#287478"/><stop offset="1" stop-color="#6bb2af"/></linearGradient>
+            <linearGradient id="leaf-right" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#133b3d"/><stop offset=".6" stop-color="#236c68"/><stop offset="1" stop-color="#4c9e90"/></linearGradient>
+            <linearGradient id="petal-back" x1="0" y1="1" x2=".4" y2="0"><stop stop-color="#113571"/><stop offset=".5" stop-color="#467dea"/><stop offset="1" stop-color="#a2cdff"/></linearGradient>
+            <linearGradient id="petal-left" x1="1" y1="1" x2="0" y2="0"><stop stop-color="#163783"/><stop offset=".5" stop-color="#3577dd"/><stop offset="1" stop-color="#9bcaff"/></linearGradient>
+            <linearGradient id="petal-right" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#182e6d"/><stop offset=".5" stop-color="#447be6"/><stop offset="1" stop-color="#86baff"/></linearGradient>
+            <linearGradient id="petal-front" x1=".9" y1="1" x2=".2" y2="0"><stop stop-color="#153774"/><stop offset=".45" stop-color="#397bd6"/><stop offset="1" stop-color="#91c9ff"/></linearGradient>
+            <linearGradient id="calyx" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5d9c9b"/><stop offset="1" stop-color="#123c4b"/></linearGradient>
+            <linearGradient id="blade" x1="0" y1="1" x2="0" y2="0"><stop stop-color="#0b272b"/><stop offset="1" stop-color="#438a81"/></linearGradient>
+          </defs>
+          <g id="grass" aria-hidden="true"></g>
+          <g id="plants"></g>
+        </svg>
+        <div id="fireflies" class="fireflies" aria-hidden="true"></div>
+      </div>
+      <div class="garden-footer">
+        <p class="tap-hint">tap the garden for a little magic</p>
+        <button class="replay" id="replay" type="button" aria-label="Replay the tulips blooming">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 10A8 8 0 1 1 5 17M4 4V10H10" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Bloom again</span>
+        </button>
+      </div>
+    </section>
+  </main>
+  <footer class="page-footer"><span>a little love, a little magic</span><span class="tiny-star" aria-hidden="true">✧</span><span>always in bloom</span></footer>
+  <div class="sr-only" id="announcement" role="status" aria-live="polite"></div>
+</body>
+</html>
